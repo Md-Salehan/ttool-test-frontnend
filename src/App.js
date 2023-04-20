@@ -34,7 +34,6 @@ function App() {
           <Route path="/admin/submission" element={<AdminSubmission />}/>
           <Route path="/admin/tools" element={<AdminTools />}/>
           <Route path="/admin/category" element={<AdminCategory />}/>
-          <Route path="/admin/login" element={<Login />}/>
         </Routes>
     </Router>
     {/* <Footer /> */}

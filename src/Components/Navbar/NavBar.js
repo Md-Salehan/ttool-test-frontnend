@@ -35,12 +35,12 @@ function NavBar({style}) {
         <Link to='/submit'>
           <span>Submit</span>
         </Link>
-        {/* <Link to='/login'>
+        <Link to='/login'>
           <span>Login</span>
         </Link>
         <Link to='/register'>
           <span>Register</span>
-        </Link> */}
+        </Link>
       </div>
     </nav>
   )
