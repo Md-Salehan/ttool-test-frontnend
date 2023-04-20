@@ -1,0 +1,26 @@
+.banner{
+    width: 100vw;
+    height: 80vh;
+    background-color: #375ee3;
+    background-image: url(https://bootswatch.com/_assets/img/splash.svg),linear-gradient(145deg, #375ee3 0%, #6543e0 80%);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.headline_div{
+    position: absolute;
+    width: 70vw;
+    height: 25vh;
+    color: white;
+    font-family: 'Delicious Handrawn', cursive !important;
+}
+
+.banner .searchBar_div{
+    position: absolute;
+    bottom: 100px;
+}
