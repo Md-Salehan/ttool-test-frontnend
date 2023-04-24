@@ -11,7 +11,7 @@ function category() {
     useEffect(() => {
         
         axios.get("https://ttool-test.onrender.com/api/category/allcategory").then((response) => {
-            setAllCategory(response.data);
+            setAllCategory(response.data.reverse());
         });
 
     }, []);

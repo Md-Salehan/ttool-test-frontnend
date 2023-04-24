@@ -51,6 +51,9 @@
     display: flex;
     align-items: center;
 }
+/* .snum{
+    width: 10% !important;
+} */
 
 .header span{
     font-size: 1.4rem;
@@ -70,6 +73,9 @@
     flex: 1;
     font-family: 'Lato', sans-serif;
     color: #444;
+}
+.content-cl::-webkit-scrollbar {
+    display: none;
 }
 
 .item-row{

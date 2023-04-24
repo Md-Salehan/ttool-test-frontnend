@@ -23,14 +23,15 @@ function AddCategory({setAllCategory}) {
 
     const addCategory = async ()=>{
         if(categoryObj.categoryName && categoryObj.categoryType){
-          
+          //ADDING CATEGORY TO DATABASE
           await axios.post("https://ttool-test.onrender.com/api/category/add", categoryObj).then((response) => {
             console.log(response.data);
             setAlertType("succes")
           })
 
+          //GETTING CATEGORY LIST
           axios.get("https://ttool-test.onrender.com/api/category/allcategory").then((response) => {
-            setAllCategory(response.data);
+            setAllCategory(response.data.reverse());
           });
           
         }else{

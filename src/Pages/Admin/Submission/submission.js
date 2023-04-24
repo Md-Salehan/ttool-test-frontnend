@@ -55,22 +55,22 @@ function submission() {
         
         <div className='table overlay'>
           <div className='header'>
-            <div className='title-box'>
+            <div className=' snum title-box '>
               <span className="title">S. Num</span>
             </div>
-            <div className='title-box'>
+            <div className='title-box tname'>
               <span className="title">Tool Name</span>
             </div>
             <div className='title-box taglist'>
               <span className="title">Tag List</span>
             </div>
-            <div className='title-box'>
+            <div className='title-box view'>
               <span className="title">View</span>
             </div>
-            <div className='title-box'>
+            <div className='title-box approve'>
               <span className="title">Aprove</span>
             </div>
-            <div className='title-box'>
+            <div className='title-box delete-title-box'>
               <span className="title">Delete</span>
             </div>
           </div>
