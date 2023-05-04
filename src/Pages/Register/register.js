@@ -74,7 +74,7 @@ function register() {
                         />
                     </div>
                     <div className='login-line'>
-                        <p>Already have an CareerKode.io account?
+                        <p>Already have an Thechie Tool account?
                             <Link to="/login">
                                 <span className="login"> Log in</span>
                             </Link>

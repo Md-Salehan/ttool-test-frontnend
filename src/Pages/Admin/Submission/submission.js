@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './submission.css'
 import RightBar from '../../../Components/RightBar/rightbar'
-import ToptBar from '../../../Components/TopBar/topbar'
+import TopBar from '../../../Components/TopBar/topbar'
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 import CheckCircleOutlineOutlinedIcon from '@mui/icons-material/CheckCircleOutlineOutlined';
@@ -51,7 +51,7 @@ function submission() {
     <div className='submission-page'>
       <RightBar />
       <div className='right-part'>
-        <ToptBar />
+        <TopBar />
         
         <div className='table overlay'>
           <div className='header'>

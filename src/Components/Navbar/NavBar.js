@@ -29,7 +29,7 @@ function NavBar({style}) {
         <Link to='/glossary'>
           <span>Glossary</span>
         </Link>
-        <Link to='/glossary'>
+        <Link to='/learn'>
           <span>Learn</span>
         </Link>
         <Link to='/submit'>

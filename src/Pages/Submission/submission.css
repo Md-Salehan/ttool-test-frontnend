@@ -123,6 +123,7 @@
 .tag-showcase-box{
     display: flex;
     overflow-x: scroll;
+    margin-bottom: 6px;
 }
 .tag-showcase-box::-webkit-scrollbar{
     display: none;

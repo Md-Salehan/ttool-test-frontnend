@@ -8,7 +8,7 @@ function Alert({type}) {
         return (
             <div className="alert" style={{backgroundColor: "rgb(253, 237, 237)"}}>
                     <ErrorOutlineIcon className="alertIcon" style={{color:" #ef5350"}}/>
-                    <p style={{color: "rgb(95, 33, 32)"}}>Please fill all the Fields!</p> 
+                    <p style={{color: "rgb(95, 33, 32)"}}>Error! somthing went wrong...</p> 
             </div>
         )
     }
@@ -25,6 +25,14 @@ function Alert({type}) {
             <div className="alert" style={{backgroundColor: "rgb(253, 237, 237)"}}>
                     <ErrorOutlineIcon className="alertIcon" style={{color:" #ef5350"}}/>
                     <p style={{color: "rgb(95, 33, 32)"}}>Invalid userID or password !</p> 
+            </div>
+        )
+    }
+    if(type === "incomplete"){
+        return (
+            <div className="alert" style={{backgroundColor: "rgb(253, 237, 237)"}}>
+                    <ErrorOutlineIcon className="alertIcon" style={{color:" #ef5350"}}/>
+                    <p style={{color: "rgb(95, 33, 32)"}}>Please fill all the Fields!</p> 
             </div>
         )
     }

@@ -4,7 +4,15 @@
     width: fit-content;
     height: fit-content;
     padding: 10px;
-    background-color: rgb(227, 227, 227) !important;
+    background-color: rgb(227, 227, 227);
     border-radius: 15px;
     font-family: 'Lato', sans-serif;
-  }
+    color: black;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+.icon{
+  margin-right: 5px;
+  font-size: large;
+}

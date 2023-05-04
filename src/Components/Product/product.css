@@ -10,6 +10,7 @@
 
     box-shadow: 5px 5px 10px  whitesmoke;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 /* .product_div .tumbnail{

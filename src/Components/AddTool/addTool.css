@@ -50,6 +50,7 @@
 .enterTag-div{
     display: flex;
     align-items: center;
+    
 }
 .addtag{
     margin-left: 15px !important;
