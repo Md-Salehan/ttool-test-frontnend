@@ -18,8 +18,8 @@ function smalltag({lable, bgColor, fontAwsmIcon, fontColor, iconColor, setFunc, 
   }
 
   return (
-    <div className='tags-box' style={{backgroundColor: bgColor}} onClick={handleClick}>
-        <i style={fontAwsmIcon?{color: iconColor}:{display: "none"}} className={fontAwsmIcon+" icon"}></i>
+    <div className='my-tags-box' style={{backgroundColor: bgColor}} onClick={handleClick}>
+        <i style={fontAwsmIcon?{color: iconColor}:{display: "none"}} className={fontAwsmIcon+" my-icon"}></i>
         <p style={{color: fontColor}}>{lable}</p>
     </div>
   )

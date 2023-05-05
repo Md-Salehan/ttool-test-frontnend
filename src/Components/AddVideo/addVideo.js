@@ -58,7 +58,7 @@ function addVideo({settutorialArr}) {
     });
     
     //get
-    axios.get("http://localhost:8800/api/tutorial/alltutorial").then((response) => {
+    await axios.get("http://localhost:8800/api/tutorial/alltutorial").then((response) => {
       settutorialArr(response.data);
     });
 

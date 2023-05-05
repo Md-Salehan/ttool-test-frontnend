@@ -1,9 +1,10 @@
-.category-page{
+.glossary-admin-page{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     overflow-y: scroll;
     background-color: #F8F8F9;
+    font-family: 'Lato', sans-serif;
 
 }
 .right-part{

@@ -1,4 +1,4 @@
-.tags-box{
+.my-tags-box{
     margin-right: 10px !important;
     margin-left: 0 !important;
     width: fit-content;
@@ -12,7 +12,7 @@
     align-items: center;
     white-space: nowrap;
 }
-.icon{
+.my-icon{
   margin-right: 5px;
   font-size: large;
 }

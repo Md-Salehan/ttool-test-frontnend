@@ -53,7 +53,7 @@ function submission() {
       <div className='right-part'>
         <TopBar />
         
-        <div className='table overlay'>
+        <div className='admin-table overlay'>
           <div className='header'>
             <div className=' snum title-box '>
               <span className="title">S. Num</span>
@@ -75,7 +75,7 @@ function submission() {
             </div>
           </div>
 
-          <div className='table-body'>
+          <div className='admin-table-body'>
             {
               submitArr.map((item, index)=>(
                 <div className='item-row' key={item._id}>

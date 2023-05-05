@@ -27,6 +27,11 @@ function rightbar() {
                     <span className='option'>Tools</span>
                 </div>
             </Link>
+            <Link to='/admin/glossary'>
+                <div className='option-box'>
+                    <span className='option'>Glossary</span>
+                </div>
+            </Link>
             <Link to='/admin/tutorials'>
                 <div className='option-box'>
                     <span className='option'>Tutorials</span>

@@ -31,7 +31,7 @@ function tools() {
             <Topbar />
             
             <AddTool updateTable={setToolArr} />
-            <div className='table'>
+            <div className='admin-table'>
                 <div className='header'>
                     <div className='title-box'>
                         <span className="title">S. Num</span>
@@ -50,7 +50,7 @@ function tools() {
                     </div>
                 </div>
 
-            <div className='table-body'> 
+            <div className='admin-table-body'> 
             {
               toolArr.map((item, index)=>(
                 <div className='item-row' key={item._id}>

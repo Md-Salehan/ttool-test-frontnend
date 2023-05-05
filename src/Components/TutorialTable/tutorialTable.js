@@ -4,10 +4,10 @@ import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import Smalltag from '../SmallTag/smalltag';
 
 function tutorialTable({tutorialArr, deleteItem}) {
-    
+
   return (
     <div className='tutorial-table'>
-        <div className='table'>
+        <div className='admin-table'>
                 <div className='header'>
                     <div className='title-box sno'>
                         <span className="title">S. Num</span>
@@ -23,7 +23,7 @@ function tutorialTable({tutorialArr, deleteItem}) {
                     </div>
                 </div>
 
-            <div className='table-body'> 
+            <div className='admin-table-body'> 
             {
                 tutorialArr.map((item, index)=>(
                 <div className='item-row' key={index}>

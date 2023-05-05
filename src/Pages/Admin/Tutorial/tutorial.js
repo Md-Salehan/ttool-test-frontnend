@@ -12,7 +12,7 @@ function tutorial() {
             settutorialArr(response.data);
           });
     }, [])
-    
+
    const deleteItem = async (id)=>{
         await axios.delete(`https://ttool-test.onrender.com/api/tutorial/delete/${id}`).then((response) =>{
             settutorialArr(tutorialArr.filter((item)=> item._id !== id))

@@ -1,0 +1,22 @@
+table{
+    width: 100%;
+    color: #444;
+}
+th{
+    padding: 10px;
+    text-align: left;
+    
+}
+td {
+    padding: 6px;
+}
+td {
+    border-top: 1px solid #ddd;
+}
+
+th, .term {
+    font-weight: bold;
+}
+.term{
+    border-right: 1px solid #ddd;
+}

@@ -21,7 +21,7 @@
 .overlay{
     margin-top: 100px !important;
 }
-.table{
+.admin-table{
     width: 90%;
     height: 600px;
     z-index: 1;
@@ -33,7 +33,7 @@
     overflow: hidden;
     overflow-y: scroll;
 }
-.table .header{
+.admin-table .header{
     width: 100%;
     height: fit-content;
     background-color: #5886FF;
@@ -57,7 +57,7 @@
     color: white;
 }
 
-.table-body{
+.tadmin-table-body{
     width: 100%;
     height: 100%;
     background-color: whitesmoke;
