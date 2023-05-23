@@ -5,6 +5,7 @@ import { TypeAnimation } from 'react-type-animation';
 function Banner() {
   return (
     <div className='banner'>
+      <div className='container'>
       <div className='headline_div'>
         <TypeAnimation
           sequence={[
@@ -16,8 +17,10 @@ function Banner() {
           repeat={0}
         />
       </div>
+      <br/>
       <div className='searchBar_div'>
           <SearchBar />
+      </div>
       </div>
     </div>
   )

@@ -3,24 +3,16 @@ import './glossaryTable.css'
 
 function glossaryTable({glossaryArr}) {
   return (
-      <table>
-        <thead>
-          <tr>
-            <th className='term'>Term</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div>
           {
             glossaryArr.map((item, index)=>(
-              <tr key={item._id}>
-                <td className='term'>{item.term}</td>
-                <td>{item.desc}</td>
-            </tr>
+              <div className='each-glossary' key={item._id}>
+                <h3>{item.term}</h3>
+                <p>{item.desc}</p>
+            </div>
             ))
           }
-        </tbody>
-      </table>
+       </div>
   )
 }
 

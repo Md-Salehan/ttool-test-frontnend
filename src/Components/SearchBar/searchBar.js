@@ -3,7 +3,7 @@ import './searchBar.css';
 function searchBar() {
   return (
     <div className='searchBar'>
-        <input type="text" name="searchTearm"/>
+        <input type="text" name="searchTearm" placeholder='Search '/>
         <i className="searchIcon fa-solid fa-magnifying-glass"></i>
     </div>
   )

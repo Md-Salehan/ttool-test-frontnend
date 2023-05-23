@@ -16,7 +16,9 @@ function productDetail() {
     <div className='AboutPage'>
         <NavBar  style={{opacity: "1"}} />
         <AboutSection product={showProduct} />
-        <ResultsSection selectedTags={productObj.state.selectedTags} productsArr={productObj.state.productsArr}/>
+        <div className='container'>
+          <h2 className='pl-3'>Related Tools</h2>
+          <ResultsSection selectedTags={productObj.state.selectedTags} productsArr={productObj.state.productsArr}/></div>
         <Footer />
     </div>
   )

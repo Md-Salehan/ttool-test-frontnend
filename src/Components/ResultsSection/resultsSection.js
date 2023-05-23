@@ -44,7 +44,7 @@ function resultsSection({selectedTags, productsArr, selectedPmodle}) {
 
   
   return (
-    <div className='resultsSection'>
+    <div className='resultsSection  border-bottom'>
       <div className='results'>
         {
           resultsArr.map((res,i)=>(

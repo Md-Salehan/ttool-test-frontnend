@@ -13,15 +13,26 @@ function aboutSection({product}) {
   }
   console.log("xxxxx",product);
   return (
+    <div className='container'>
     <div className='aboutSection'>
-        <div className='pd-container'>
+        <div className='pd-container pt-5'>
+          <div className='row'>
+            <div className='col-md-5'>
             <img className='p-img' src={product.toolImageURL} alt=''/>
-          <div className='p-detail'>
+            </div>
+            <div className='col-md-7'>
+ 
+            <div className='p-detail'>
             <h2 className='p-name'>
               {product.toolName}
+              <div className='float-right likediv'>
+                {(!like &&<i className="fa-regular fa-heart d-like" onClick={handleLike}></i>)}
+                {(like &&<i className="fa-solid fa-heart d-like" onClick={handleLike}></i>)}
+                <p className='d-inline-block m-0 ml-2'>2.6k</p>
+              </div>
             </h2>
             <p className='p-desc'>{product.toolDesc}</p>
-            <div className='pricing-modal-div'>
+            <div className='pricing-modal-div p-mpdelnew'>
               <h3 className='lable'>Pricing Modal:</h3>
               <div className='pricing-modal'>
                 <p>{product.priceModle}</p>
@@ -48,15 +59,15 @@ function aboutSection({product}) {
                   <button className='visit-btn'>Visit name</button>
                 </Link>
               </div>
-              <div className='right'>
-                {(!like &&<i className="fa-regular fa-heart d-like" onClick={handleLike}></i>)}
-                {(like &&<i className="fa-solid fa-heart d-like" onClick={handleLike}></i>)}
-                <p>2.6k</p>
-              </div>
+             
             </div>
 
           </div>
+            </div>
+          </div>
+          
         </div>
+    </div>
     </div>
   )
 }

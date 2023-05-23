@@ -1,14 +1,8 @@
 .learn-page{
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(rgba(187, 225, 255, 0.1) 0%, rgba(187, 225, 255, 0.19) 100%), rgb(255, 255, 255);
-    overflow-y: scroll;
-
+    
 }
 .middle-body{
     /* width: 800px; */
-    width: 70vw;
-    height: 100vh;
     display: flex;
     box-sizing: border-box;
     padding: 74px 8vw 0 8vw;

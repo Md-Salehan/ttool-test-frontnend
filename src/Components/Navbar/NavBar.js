@@ -15,7 +15,10 @@ import {
 } from "react-router-dom";
 function NavBar({style}) {
   return (
+    <div className='row m-0'>
+
     <nav style={style} className='navbar'>
+    <div className='container'>
       <div className='logo-container'>
         <img src='../../../images/logo.png' alt='logo' />
       </div>
@@ -35,14 +38,17 @@ function NavBar({style}) {
         <Link to='/submit'>
           <span>Submit</span>
         </Link>
-        <Link to='/login'>
-          <span>Login</span>
+        <Link to='/login' className='link-login'>
+         Login
         </Link>
-        <Link to='/register'>
-          <span>Register</span>
+        <Link to='/register' className='link-login'>
+         Register
         </Link>
       </div>
+      </div>
     </nav>
+    </div>
+    
   )
 }
 

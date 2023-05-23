@@ -33,13 +33,16 @@ function product({name, description, imageURL, onClick}) {
               <div className='p_desc'>
                 <p >{description}</p>
               </div>
-            </div>
-
-            <div className='lower'>
+              <div>
+                <button className='learn-more'>Learn More</button>
+                <span className='lower float-right'>
               <i className="fa-regular fa-bookmark save" onClick={handleSaveClick}></i> 
               <i className="fa-regular fa-heart like" onClick={handleLikeClick}></i>
-              
+            </span>
+                </div>
             </div>
+
+            
 
         </div>
     </div>

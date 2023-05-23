@@ -14,15 +14,18 @@ function glossary() {
     }, [])
 
   return (
-    <div className='glossary-page'>
+   
+    <div className=''>
     <NavBar />
-    <div className='glossary-table-section'>
-      <div className='sb-container'>
+    <div className=''>
+    <h2 className='heading-glossary'>Glossary</h2>
+      <div className='sb-container glo-searchbar mb-5 mt-2'>
+      
         <SearchBar />
       </div>
-      <div className='glossary-table-section'>
-        <div className='glossary-table-container'>
-          <div className='table-outer-border'>
+      <div className='row m-0'>
+        <div className='container'>
+          <div>
             <GlossaryTable glossaryArr={glossaryArr}/>
           </div>
         </div>
@@ -31,6 +34,8 @@ function glossary() {
     </div>
     <Footer />
     </div>
+   
+   
   )
 }
 

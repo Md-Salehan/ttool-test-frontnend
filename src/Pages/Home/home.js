@@ -20,13 +20,30 @@ function Home() {
     <div className='home'>
         <NavBar />
         <Banner />
-        <FilterSection selectedTags={selectedTags} setSelectedTags={setSelectedTags}
-          selectedPmodle={selectedPmodle} setSelectedPmodle={setSelectedPmodle}
-        />
-        <ResultsSection selectedTags={selectedTags} 
+
+        <div className='container mt-5'>
+          <div className='row border-top border-right'>
+          <div className='col-md-3 p-0'>
+            
+            <div className='filter-maindiv border-right border-left border-bottom'>
+              <h3>Filter</h3>
+            <FilterSection selectedTags={selectedTags} setSelectedTags={setSelectedTags}
+                      selectedPmodle={selectedPmodle} setSelectedPmodle={setSelectedPmodle}
+                    />
+            </div>
+          </div>
+          <div className='col-md-9 p-0'>
+            <div>
+            <ResultsSection selectedTags={selectedTags} 
           productsArr={productsArr} 
           selectedPmodle={selectedPmodle}
           />
+            </div>
+          </div>
+          </div>
+        </div>
+        
+        
         <Footer />
     </div>
   )
