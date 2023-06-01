@@ -5,11 +5,25 @@ import AddTool from '../../../Components/AddTool/addTool'
 import Topbar from '../../../Components/TopBar/topbar'
 import Rightbar from '../../../Components/RightBar/rightbar'
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
-import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import axios from 'axios'
+import Smalltag from '../../../Components/SmallTag/smalltag'
+import { Button } from '@mui/material'
+import TootTableRow from '../../../Components/toolTableRow/tootTableRow'
 function tools() {
   const [toolArr, setToolArr] = useState([])
+  const [alertType, setAlertType] = useState("nothing");
+  const [tag, setTag] = useState("")
+  const [toolObj, setToolObj] = useState({
+    priceModle: "Free",
+    toolName: "",
+    toolURL: "",
+    toolImgURL: "",
+    toolVideoURL: "",
+    toolDesc: "",
+    toolExtraDesc: "",
+    tagList: ""
+  })
   useEffect(() => {
     axios.get("https://ttool-test.onrender.com/api/tool/alltool").then((response) => {
       setToolArr(response.data);
@@ -23,6 +37,31 @@ function tools() {
     })
     console.log(`ok`);
   }
+
+
+  
+
+  const handleOnChange = (e)=> {
+    const name = e.target.name;
+    const value = e.target.value;
+    setToolObj({
+        ...toolObj,
+        [name]:value
+    })
+  }
+
+  const handleTagChange = (e)=>{
+    const value = e.target.value;
+    setTag(value)
+  }
+  const addTag = (index)=>{
+    let newTagList = [...toolArr[index].tagList, tag]
+    setToolObj({
+      ...toolObj,
+      tagList: newTagList
+    })
+  }
+
 
   return (
     <div className='tools-page'>
@@ -43,34 +82,17 @@ function tools() {
                         <span className="title">Tag List</span>
                     </div>
                     <div className='title-box'>
-                        <span className="title">View</span>
+                        <span className="title">Delete</span>
                     </div>
                     <div className='title-box'>
-                        <span className="title">Delete</span>
+                        <span className="title">View</span>
                     </div>
                 </div>
 
             <div className='admin-table-body'> 
             {
               toolArr.map((item, index)=>(
-                <div className='item-row' key={item._id}>
-                <div className='content-cl'> 
-                  <span>{index+1}.</span>
-                </div>
-                <div className='content-cl'> 
-                  <span>{item.toolName}</span>
-                </div>
-                <div className='content-cl taglist'> 
-                  <span>{item.tagList.join(", ")}</span>
-                </div>
-
-                <div className='content-cl'> 
-                    <VisibilityOutlinedIcon className='eyeIcon' />
-                </div>
-                <div className='content-cl'> 
-                    <DeleteOutlinedIcon className='deleteIcon' onClick={()=> deleteItem(item._id)}/>
-                </div>
-            </div>
+                <TootTableRow setToolArr={setToolArr} toolArr={toolArr} item={item} index={index} key={item._id}/>
               ))
             }
           </div>

@@ -106,17 +106,11 @@ function login() {
             <input type="email" name="email" className="email mb-3" placeholder="Email address"
                 onChange={handleOnChange} value={user.email}
             />
-            <input type="text" name="password" className="password mb-3" placeholder="Password"
+            <input type="password" name="password" className="password mb-3" placeholder="Password"
                 onChange={handleOnChange} value={user.password} autoComplete="off"
             />
         </div>
-        {/* <div className='login-line'>
-            <p>Need a Techie tool account? It’s free
-                <Link to="/register">
-                    <span className="login"> Sign up</span>
-                </Link>
-            </p>
-        </div> */}
+        
         <div className="btn-container">
             <button className='link-login p-2'
             onClick={handleLogin}>

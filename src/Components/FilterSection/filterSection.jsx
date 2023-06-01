@@ -5,7 +5,7 @@ import {tagsArr1, tagsArr2, tagsArr3} from "../../tagsArray"
 import axios from 'axios'
 
  
-function filterSection({selectedTags, setSelectedTags, setSelectedPmodle, selectedPmodle}) {
+function filterSection({selectedTags, setSelectedTags, setSelectedPmodle, selectedPmodle, setSearch}) {
     const [allCategory, setAllCategory] = useState([]) 
     useEffect(() => {
         axios.get("https://ttool-test.onrender.com/api/category/allcategory").then((response) => {
@@ -21,7 +21,12 @@ function filterSection({selectedTags, setSelectedTags, setSelectedPmodle, select
             {
                 allCategory.filter((item)=>item.categoryType === "Feature")
                     .map((item)=>(
-                        <Tags name={item.categoryName} setSelectedTags={setSelectedTags} selectedTags={selectedTags} key={item._id}/>
+                        <Tags name={item.categoryName} 
+                            setSelectedTags={setSelectedTags} 
+                            selectedTags={selectedTags} 
+                            key={item._id}
+                            setSearch={setSearch}
+                        />
                     ))
             }
         </div>
@@ -29,12 +34,21 @@ function filterSection({selectedTags, setSelectedTags, setSelectedPmodle, select
             {
                 allCategory.filter((item)=>item.categoryType === "Pricing")
                     .map((item)=>(
-                        <Tags name={item.categoryName} setSelectedTags={setSelectedPmodle} selectedTags={selectedPmodle} key={item._id}/>
+                        <Tags name={item.categoryName} 
+                            setSelectedTags={setSelectedPmodle} 
+                            selectedTags={selectedPmodle} 
+                            key={item._id}
+                            setSearch={setSearch}
+                        />
                     ))
             }
         </div>
         <div className='tags_container_3'>
-            <Tags name={"TECHIE Tool Pick"} setSelectedTags={setSelectedTags} selectedTags={selectedTags} />
+            <Tags name={"TECHIE Tool Pick"} 
+                setSelectedTags={setSelectedTags} 
+                selectedTags={selectedTags}
+                setSearch={setSearch}
+            />
         </div>
     </div>
   )

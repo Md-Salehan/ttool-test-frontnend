@@ -2,13 +2,9 @@ import React, { useState } from 'react'
 import "./submission.css"
 import Alert from '../../Components/Alert/Alert';
 import Button from '@mui/material/Button';
-import { Link } from "react-router-dom";
 import NavBar from '../../Components/Navbar/NavBar'
 import GradiantBG from '../../Components/GradiantBG/gradiantBG';
 import FormControl from '@mui/material/FormControl';
-import MenuItem from '@mui/material/MenuItem';
-import Select from '@mui/material/Select';
-import InputLabel from '@mui/material/InputLabel';
 import Smalltag from '../../Components/SmallTag/smalltag';
 import axios from "axios";
 

@@ -12,6 +12,11 @@ function rightbar() {
             </h2>
         </div>
         <div className='options-container'>
+            <Link to='/admin/dashboard'>
+                <div className='option-box'>
+                    <span className='option'>Banner</span>
+                </div>
+            </Link>
             <Link to='/admin/category'>
                 <div className='option-box'>
                     <span className='option'>Category</span>
@@ -35,6 +40,11 @@ function rightbar() {
             <Link to='/admin/tutorials'>
                 <div className='option-box'>
                     <span className='option'>Tutorials</span>
+                </div>
+            </Link>
+            <Link to='/admin/newAdmin'>
+                <div className='option-box'>
+                    <span className='option'>Admins</span>
                 </div>
             </Link>
             <Link to='/login'>

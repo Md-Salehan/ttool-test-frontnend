@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import "./tags.css"
 let x=0;
-function tags({name, setSelectedTags, selectedTags}) {
+function tags({name, setSelectedTags, selectedTags, setSearch}) {
     const [bool, setBool] = useState(false)
     function handleClick(e){
-        
+        setSearch("")
         if(!bool){
             e.target.className= "tag onSelectTagColor"
             setSelectedTags((prev)=>{

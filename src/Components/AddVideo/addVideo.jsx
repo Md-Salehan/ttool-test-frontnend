@@ -129,7 +129,7 @@ function addVideo({settutorialArr}) {
                           <div className='tag-showcase-box'>
                             {
                               videoObj.tagList.map((tagNmae, i)=>(
-                                <Smalltag setFunc={setVideoObj} name="tutorial" lable={tagNmae} key={i} index={i} obj={videoObj}/>
+                                <Smalltag  setFunc={setVideoObj} name="tutorial" lable={tagNmae} key={i} index={i} obj={videoObj}/>
                               ))
                             }
                           </div>

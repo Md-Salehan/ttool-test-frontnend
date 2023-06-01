@@ -125,7 +125,9 @@ function addTool({updateTable}) {
                 <div className='tag-showcase-box'>
                   {
                     toolObj.tagList.map((tagNmae, i)=>(
-                      <Smalltag lable={tagNmae} key={i}/>
+                      <Smalltag lable={tagNmae} key={i} name={"tooltable"}
+                        
+                      />
                     ))
                   }
                 </div>

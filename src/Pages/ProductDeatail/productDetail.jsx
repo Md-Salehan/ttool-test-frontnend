@@ -11,16 +11,17 @@ function productDetail() {
   const productObj = useLocation()
   let { productId } = useParams();
   let [showProduct] = productObj.state.productsArr.filter((item)=> productId === item._id)
-  console.log(showProduct);
+
   return (
     <div className='AboutPage'>
         <NavBar  style={{opacity: "1"}} />
         <AboutSection product={showProduct} />
         <div className='container'>
           <h2 className='pl-3'>Related Tools</h2>
-          <ResultsSection selectedTags={productObj.state.selectedTags} productsArr={productObj.state.productsArr}/></div>
+          <ResultsSection resultsArr={productObj.state.productsArr} productsArr={productObj.state.productsArr}/>
+        </div>
         <Footer />
-    </div>
+    </div> 
   )
 }
 

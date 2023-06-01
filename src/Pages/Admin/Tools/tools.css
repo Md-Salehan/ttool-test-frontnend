@@ -57,9 +57,9 @@
     color: white;
 }
 
-.tadmin-table-body{
+.admin-table-body{
     width: 100%;
-    height: 100%;
+    height: fit-content !important;
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
@@ -73,6 +73,7 @@
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
+    height: 50px;
 }
 
 .item-row{
@@ -81,6 +82,13 @@
     margin-bottom: 5px;
     background-color: white;
     display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.show{
+    display: flex;
+    width: 100%;
+    height: fit-content;
 }
 .header span{
     font-size: 1.4rem;
@@ -101,4 +109,62 @@
 }
 .taglist{
     flex: 2 !important;
+}
+
+
+.update-container{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+
+}
+.update-container .left{
+    width: 34%;
+    height: 185px;
+}
+.update-container .right{
+    width: 66%;
+    height: 225px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding-left: 15px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.table-tool-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.email{
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+}
+
+.update-container2{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: white;
+    display: flex;
+    overflow: hidden;
+
+}
+.tagInput{
+    width: 100%;
+}
+.tool-description{
+    margin-top: 10px !important;
+    min-height: 80px;
 }

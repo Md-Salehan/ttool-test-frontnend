@@ -26,9 +26,6 @@ function NavBar({style}) {
         <Link to='/'>
           <span>Home</span>
         </Link>
-        <Link to='/news'>
-          <span>News</span>
-        </Link>
         <Link to='/glossary'>
           <span>Glossary</span>
         </Link>

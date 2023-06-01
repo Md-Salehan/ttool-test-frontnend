@@ -5,7 +5,7 @@ import './smalltag.css';
 function smalltag({lable, bgColor, fontAwsmIcon, fontColor, iconColor, setFunc, name, index, obj}) {
   const handleClick = (e)=>{
     if(setFunc){
-      if(name === "tutorial"){
+      if(true){
         setFunc({
             ...obj,
             tagList: obj.tagList.filter((e, i)=>{
@@ -13,6 +13,9 @@ function smalltag({lable, bgColor, fontAwsmIcon, fontColor, iconColor, setFunc, 
             })
         })
       }
+    }
+    if(name === "tooltable"){
+
     }
     console.log("got Click")
   }

@@ -12,6 +12,8 @@ import AdminTools from './Pages/Admin/Tools/tools';
 import AdminCategory from './Pages/Admin/Category/category';
 import AdminTutorial from './Pages/Admin/Tutorial/tutorial';
 import AdminGlossary from './Pages/Admin/Glossary/glossay';
+import AdminDashboard from './Pages/Admin/Dashboard/Dashboard';
+import NewAdmin from './Pages/Admin/NewAdmin/NewAdmin';
 import Learn from './Pages/Learn/learn';
 import Play from './Pages/Play/play';
 import {
@@ -42,6 +44,8 @@ function App() {
           <Route path="/admin/category" element={<AdminCategory />}/>
           <Route path="/admin/tutorials" element={<AdminTutorial />}/>
           <Route path="/admin/glossary" element={<AdminGlossary />}/>
+          <Route path="/admin/dashboard" element={<AdminDashboard />}/>
+          <Route path="/admin/newadmin" element={<NewAdmin />}/>
         </Routes>
     </Router>
     {/* <Footer /> */}

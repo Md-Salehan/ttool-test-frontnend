@@ -54,3 +54,6 @@
 .deleteIcon:hover{
     color: rgb(206, 27, 27);
 }
+.save-icon{
+    display: none;
+}

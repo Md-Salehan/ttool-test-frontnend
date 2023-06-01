@@ -11,7 +11,7 @@ function aboutSection({product}) {
     }
     else setLike(true);
   }
-  console.log("xxxxx",product);
+
   return (
     <div className='container'>
     <div className='aboutSection'>
