@@ -4,8 +4,7 @@ import "./tootTableRow.css"
 import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
 import axios from 'axios'
-import Smalltag from '../SmallTag/smalltag';
-import { Button } from '@mui/material'
+
 
 function tootTableRow({setToolArr, toolArr, item, index}) {
   const [tag, setTag] = useState("")
@@ -76,7 +75,7 @@ function tootTableRow({setToolArr, toolArr, item, index}) {
     })
     let prev = toolObj
     
-    await axios.put("http://localhost:8800/api/tool/"+item._id+"/update",{
+    await axios.put("https://ttool-test.onrender.com/api/tool/"+item._id+"/update",{
         ...toolObj,
         tagList: [...arr, ...prev.updatedTagList]
     }).then(()=>{
