@@ -8,6 +8,7 @@ import axios from 'axios'
 
 function tootTableRow({setToolArr, toolArr, item, index}) {
   const [tag, setTag] = useState("")
+  const [loading, setLoading] = useState(false)
   const [visibility, setVisibility] = useState(false)
   const [toolObj, setToolObj] = useState({
     priceModle: "",
@@ -66,7 +67,7 @@ function tootTableRow({setToolArr, toolArr, item, index}) {
         tagList: value
     })
   }
-  const addTag = async (e)=>{
+  const updateTool = async (e)=>{
     e.preventDefault()
     let arr= [];
     if(toolObj.tagList) arr = toolObj.tagList.split(",")
@@ -74,12 +75,13 @@ function tootTableRow({setToolArr, toolArr, item, index}) {
         arr[index] = item.trim();
     })
     let prev = toolObj
-    
+    setLoading(true)
     await axios.put("https://ttool-test.onrender.com/api/tool/"+item._id+"/update",{
         ...toolObj,
         tagList: [...arr, ...prev.updatedTagList]
     }).then(()=>{
         console.log("udated");
+        setLoading(false)
     }).catch((err)=>{
         console.log(err);
     })
@@ -181,8 +183,8 @@ function tootTableRow({setToolArr, toolArr, item, index}) {
                             ></textarea>
                             <button className='payment-btn addtag' 
                               variant="contained"
-                              onClick={addTag}>
-                              <span>Update</span>
+                              onClick={updateTool}>
+                              <span>{loading? "Loading...":"Update"}</span>
                             </button>
                       </div>
                     </form> 
