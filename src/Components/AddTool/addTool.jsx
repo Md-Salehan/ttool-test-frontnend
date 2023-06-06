@@ -12,7 +12,7 @@ function addTool({updateTable}) {
     priceModle: "Free",
     toolName: "",
     toolURL: "",
-    toolImgURL: "",
+    toolImageURL: "",
     toolVideoURL: "",
     toolDesc: "",
     toolExtraDesc: "",
@@ -54,7 +54,7 @@ function addTool({updateTable}) {
        toolObj.tagList.length
       ){
         setAlertType("succes");
-        
+        console.log(toolObj);
         await axios.post("https://ttool-test.onrender.com/api/tool/addtool", toolObj).then((response) => {
           console.log(response.data);
         })
@@ -89,8 +89,8 @@ function addTool({updateTable}) {
                       <input type="text" name="toolURL" className="email"  placeholder="Tool URL"
                         onChange={handleOnChange} value={toolObj.toolURL}
                       />
-                      <input type="text" name="toolImgURL" className="email" placeholder="Tool Image URL"
-                        onChange={handleOnChange} value={toolObj.toolImgURL}
+                      <input type="text" name="toolImageURL" className="email" placeholder="Tool Image URL"
+                        onChange={handleOnChange} value={toolObj.toolImageURL}
                       />
                       <input type="text" name="toolVideoURL" className="email" placeholder="Video URL"
                         onChange={handleOnChange} value={toolObj.toolVideoURL}

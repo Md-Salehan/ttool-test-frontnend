@@ -31,7 +31,7 @@ function tootTableRow({setToolArr, toolArr, item, index}) {
   }
 
   const expandRow = (index, item)=>{
-    const row = document.querySelectorAll(".item-row")
+    const row = document.querySelectorAll(".tool-item-row")
     const body = document.querySelectorAll(".update-container")
     row[index].style.height = "fit-content"
     body[index].style.display = "visible"
@@ -41,7 +41,7 @@ function tootTableRow({setToolArr, toolArr, item, index}) {
     setVisibility(!visibility)
   }
   const collapsRow = (index, item)=>{
-    const row = document.querySelectorAll(".item-row")
+    const row = document.querySelectorAll(".tool-item-row")
     const body = document.querySelectorAll(".update-container")
     row[index].style.height = "50px"
     setVisibility(!visibility)
@@ -91,7 +91,7 @@ function tootTableRow({setToolArr, toolArr, item, index}) {
 
   }
   return (
-    <div className='item-row' key={item._id}>
+    <div className='tool-item-row' key={item._id}>
                   <div className='show'>
                   <div className='content-cl'> 
                     <span>{index+1}.</span>

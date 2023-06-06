@@ -27,7 +27,7 @@ function categorySection({allCategory, setAllCategory}) {
         document.querySelectorAll("."+editIcon)[i].style.display="inline-block"
         document.querySelectorAll("."+saveIcon)[i].style.display="none"
         
-        await axios.put("https://ttool-test.onrender.com/api/category/"+id+"/update",{
+        await axios.put("https://ttool-test.onrender.com/apih/category/"+id+"/update",{
             categoryName: document.querySelectorAll("."+className)[i].innerText
         }).then(()=>{
             console.log("udated");

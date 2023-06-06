@@ -23,15 +23,7 @@ function Home() {
   
   }, []) 
 
-  useEffect(() => {
-    let res = productsArr.filter((product)=>{
-      if(product.toolName === undefined) return false;
-      if(product.toolName.toLowerCase().match(search.toLowerCase())) return true;
-      return false
-    })
-    setFilteredsArr(res)
-  
-  }, [search])
+
 
   
   useEffect(() => { 
