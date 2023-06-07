@@ -12,6 +12,8 @@ function AddAdmin() {
         phone_num: "",
         email: "",
         password: "",
+        isAdmin: true,
+        mainAdmin: false
     })
 
     function handleOnChange(e) {
@@ -29,7 +31,7 @@ function AddAdmin() {
         e.preventDefault()
 
         if(user.fname && user.lname && user.phone_num && user.email && user.password){
-            await axios.post("http://localhost:8800/api/admin/register", user).then((res)=>{
+            await axios.post("https://ttool-test.onrender.com/api/auth/register", user).then((res)=>{
                 setUser({
                     fname: "", lname: "", phone_num: "", email: "", password: "",
                 })

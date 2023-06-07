@@ -4,11 +4,13 @@ import Alert from '../../Components/Alert/Alert';
 import Button from '@mui/material/Button';
 import { Link, useNavigate, } from "react-router-dom";
 import NavBar from '../../Components/Navbar/NavBar'
+import axios from 'axios';
 
 
 function login() {
     const navigate = useNavigate()
     const [alertType, setAlertType] = useState("nothing");
+    const [loading, setLoading] = useState(false);
     const [user, setUser] = useState({
         email: "",
         password: "",
@@ -24,16 +26,28 @@ function login() {
         })
     }
 
-    function handleLogin(e){
+    async function handleLogin(e){
         e.preventDefault()
 
         if(user.email && user.password){
-            setAlertType("succes");
-            if(user.email == "admin@gmail.com" && user.password === "123456")
-                navigate(`/admin/tools`)
-            else setAlertType("invalid");
+            setLoading(true)
+            await axios.post("https://ttool-test.onrender.com/api/auth/login",{
+                email: user.email,
+                password: user.password
+            }).then((res)=>{
+                setLoading(false)
+                setAlertType("succes");
+                
+                if(res.data.isAdmin)navigate(`/admin/tools`)
+                else navigate(`/`)
+            }).catch((err)=>{
+                console.log(err);
+                setLoading(false)
+                setAlertType("invalid");
+            })
+
         }else{
-            setAlertType("error");
+            setAlertType("incomplete");
         }
     }
     
@@ -114,7 +128,7 @@ function login() {
         <div className="btn-container">
             <button className='link-login p-2'
             onClick={handleLogin}>
-                Log in
+                {loading? "Loading..." : "Log In"}
             </button> 
         </div> 
     </form>
