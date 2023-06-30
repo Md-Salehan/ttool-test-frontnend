@@ -14,7 +14,7 @@ function tootTableRow({setToolArr, toolArr, item, index}) {
     priceModle: "",
     toolName: "",
     toolURL: "",
-    toolImgURL: "",
+    toolImageURL: "",
     toolVideoURL: "",
     toolDesc: "",
     toolExtraDesc: "",
@@ -133,8 +133,8 @@ function tootTableRow({setToolArr, toolArr, item, index}) {
                             <input type="text" name="toolURL" className="email"  placeholder={item.toolURL}
                               onChange={handleOnChange} value={toolObj.toolURL}
                             />
-                            <input type="text" name="toolImgURL" className="email" placeholder={item.toolImageURL}
-                              onChange={handleOnChange} value={toolObj.toolImgURL}
+                            <input type="text" name="toolImageURL" className="email" placeholder={item.toolImageURL}
+                              onChange={handleOnChange} value={toolObj.toolImageURL}
                             />
                             <input type="text" name="toolVideoURL" className="email" placeholder={item.toolVideoURL|| "Enter Video URL"}
                               onChange={handleOnChange} value={toolObj.toolVideoURL|| ""}
